@@ -13,6 +13,7 @@ import { DvdDetailComponent } from './dvd/dvd-detail/dvd-detail.component';
 import { DvdFormComponent } from './dvd/dvd-form/dvd-form.component'
 import { ReactiveFormsModule } from '@angular/forms';
 import { BookDetailComponent } from './book/book-detail/book-detail.component';
+import { BookAuthorsComponent } from './book/book-authors/book-authors.component';
 
 /*
 const appRoutes: Routes = [
@@ -31,7 +32,8 @@ const appRoutes: Routes = [
     PageNotFoundComponent,
     DvdDetailComponent,
     DvdFormComponent,
-    BookDetailComponent
+    BookDetailComponent,
+    BookAuthorsComponent
   ],
   imports: [
     BrowserModule,
