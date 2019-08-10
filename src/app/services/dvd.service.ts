@@ -9,7 +9,7 @@ import { map, delay } from 'rxjs/operators';
 export class DvdService {
 
   private dvdSubject$: BehaviorSubject<Dvd[]> = new BehaviorSubject<Dvd[]>([]);
-  private dvds$ = this.dvdSubject$.asObservable();
+  public dvds$ = this.dvdSubject$.asObservable();
 
   constructor() {
     timer(2000)
