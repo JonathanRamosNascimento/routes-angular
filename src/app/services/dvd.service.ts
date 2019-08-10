@@ -22,7 +22,7 @@ export class DvdService {
   }
 
   add(b: Dvd) {
-    let dvds = this.dvdSubject$.getValue().push(b);
+    this.dvdSubject$.getValue().push(b);
   }
 
   remove(i: number) {

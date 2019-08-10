@@ -24,7 +24,7 @@ export class BookService {
   }
 
   add(b: Book) {
-    let books = this.bookSubject$.getValue().push(b);
+    this.bookSubject$.getValue().push(b);
   }
 
   remove(i: number) {
