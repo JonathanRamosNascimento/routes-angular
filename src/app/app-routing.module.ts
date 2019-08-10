@@ -1,3 +1,4 @@
+import { BookAuthorsComponent } from './book/book-authors/book-authors.component';
 import { DvdFormComponent } from './dvd/dvd-form/dvd-form.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { BookComponent } from './book/book.component';
@@ -14,7 +15,13 @@ const appRoutes: Routes = [
     path: 'books',
     component: BookComponent,
     children: [
-      { path: ':index', component: BookDetailComponent },
+      {
+        path: ':index',
+        component: BookDetailComponent,
+        children: [
+          { path: 'authors', component: BookAuthorsComponent }
+        ]
+      },
     ]
   },
   { path: 'dvds/new', component: DvdFormComponent },

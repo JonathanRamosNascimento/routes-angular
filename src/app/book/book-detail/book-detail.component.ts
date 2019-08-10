@@ -38,7 +38,7 @@ export class BookDetailComponent implements OnInit {
   }
 
   goAuthors() {
-    let url = '/books' + this.index + '/authors';
+    let url = '/books/' + this.index + '/authors';
     this.router.navigate([url, { authors: this.authors }])
   }
 
