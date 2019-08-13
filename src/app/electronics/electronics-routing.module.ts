@@ -4,8 +4,8 @@ import { ElectronicListComponent } from './electronic-list/electronic-list.compo
 import { ElectronicDetailComponent } from './electronic-list/electronic-detail/electronic-detail.component';
 
 const routes: Routes = [
-   {path: 'electronics', component: ElectronicListComponent},
-   {path: 'electronics/:index', component: ElectronicDetailComponent},
+   {path: '', component: ElectronicListComponent},
+   {path: ':index', component: ElectronicDetailComponent},
 
 ];
 
