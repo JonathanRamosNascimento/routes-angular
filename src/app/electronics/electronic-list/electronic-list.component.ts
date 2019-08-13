@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ElectronicService } from 'src/app/services/electronic.service';
+import { Observable } from 'rxjs';
+import { Electronic } from 'src/app/models/electronic';
 
 @Component({
   selector: 'app-electronic-list',
@@ -7,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ElectronicListComponent implements OnInit {
 
-  constructor() { }
+  electronic$: Observable<Electronic[]>;
+
+  constructor(private electronicService: ElectronicService) { }
 
   ngOnInit() {
+    this.electronic$ = this.electronicService.electronics$;
   }
 
 }

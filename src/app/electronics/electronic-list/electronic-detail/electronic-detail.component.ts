@@ -1,4 +1,8 @@
+import { Electronic } from 'src/app/models/electronic';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ElectronicService } from 'src/app/services/electronic.service';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-electronic-detail',
@@ -7,9 +11,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ElectronicDetailComponent implements OnInit {
 
-  constructor() { }
+  electronic$: Observable<Electronic>;
+
+  constructor(
+    private electronicService: ElectronicService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) { }
 
   ngOnInit() {
+    let i: number = +this.route.snapshot.paramMap.get('index');
+    this.electronic$ = this.electronicService.get(i);
+  }
+
+  back() {
+    this.router.navigate(['..'], {relativeTo: this.route})
   }
 
 }
