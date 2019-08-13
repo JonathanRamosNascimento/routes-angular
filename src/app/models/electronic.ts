@@ -1,6 +1,6 @@
 export interface Electronic {
     name: string;
-    brnad: string;
+    brand: string;
     price: number;
     description: string;
 }

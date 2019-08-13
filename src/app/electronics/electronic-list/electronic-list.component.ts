@@ -10,12 +10,10 @@ import { Electronic } from 'src/app/models/electronic';
 })
 export class ElectronicListComponent implements OnInit {
 
-  electronic$: Observable<Electronic[]>;
-
+  electronics$: Observable<Electronic[]>;
   constructor(private electronicService: ElectronicService) { }
 
   ngOnInit() {
-    this.electronic$ = this.electronicService.electronics$;
+    this.electronics$ = this.electronicService.electronics$;
   }
-
 }

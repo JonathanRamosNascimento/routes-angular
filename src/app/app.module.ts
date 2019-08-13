@@ -40,10 +40,10 @@ const appRoutes: Routes = [
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
+    ElectronicsModule,
     AppRoutingModule,
     // RouterModule.forRoot(appRoutes),
     ReactiveFormsModule,
-    ElectronicsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

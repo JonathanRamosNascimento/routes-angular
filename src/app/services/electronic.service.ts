@@ -13,15 +13,15 @@ export class ElectronicService {
 
   constructor() {
     timer(1000)
-    .subscribe(() => {
-      this.electronicSubject$.next([
-        {name: 'Headphone', brnad: 'Bose', price: 200, description: 'Noise cancelling'},
-        {name: 'Portable HD', brnad: 'Samsung', price: 100, description: '2TB Hard Disk'},
-        {name: 'Monitor 23\"', brnad: 'AOC', price: 200, description: 'HDMI/VGA'},
-        {name: 'Processador i7-8700k', brnad: 'Intel', price: 400, description: '12 MB Cache'},
-        {name: 'Moise wireless', brnad: 'Logitech', price: 50, description: 'For Gamers'},
-      ])
-    })
+      .subscribe(() => {
+        this.electronicSubject$.next([
+          { name: 'Headphone', brand: 'Bose', price: 200, description: 'Noise cancelling' },
+          { name: 'Portable HD', brand: 'Samsung', price: 100, description: '2TB Hard Disk' },
+          { name: 'Monitor 23\"', brand: 'AOC', price: 200, description: 'HDMI/VGA' },
+          { name: 'Processador i7-8700k', brand: 'Intel', price: 400, description: '12 MB Cache' },
+          { name: 'Moise wireless', brand: 'Logitech', price: 50, description: 'For Gamers' },
+        ])
+      })
   }
 
   get(i: number): Observable<Electronic> {
